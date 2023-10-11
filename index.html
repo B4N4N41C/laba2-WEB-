@@ -10,15 +10,13 @@
 
 <body>
     <div class="news-list">
-
     </div>
     <script type="text/javascript">
         function get(){
-            let html = news.map((newsItem) => `<div> <p> <a href="detail.html#${newsItem.id}" class = "${newsItem.id}">${newsItem.title}</a><br>${newsItem.discription} </p></div>`);
+            let html = news.map((newsItem) => `<div> <p> <a href="detail.html#${newsItem.id}" class = "${newsItem.id}">${newsItem.title}</a><br>${newsItem.discription} </p></div>`).join('');
             document.querySelector(".news-list").innerHTML = html;
         }
         get();
     </script>
 </body>
-
 </html>
